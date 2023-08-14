@@ -22,7 +22,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Set your OpenAI API key
-openai_api_key = "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"
+openai_api_key = ""
 openai.api_key = openai_api_key
 
 # Function to read PDF with error handling

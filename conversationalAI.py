@@ -140,6 +140,14 @@ def app():
     # Button to clear chat history
     if st.button('Clear Chat'):
         st.session_state.conversation_history = []
+     # 保存对话到文件
+    path = st.text_input("path:")
+    if st.button("Save Code"):
+        if path:
+            f=open(path,"a")
+            for i in range(len(st.session_state.conversation_history)):
+                f.write(st.session_state.conversation_history[i])
+            f.close()
 
     # -----------PDF Reading------------
     if pdf_file:
